@@ -897,6 +897,7 @@ footer span a:hover{
 .container{
     color:white;
     font-family: 'Poppins', sans-serif;
+    margin:0;
 }
 .skills .progress {
     height: 60px;
