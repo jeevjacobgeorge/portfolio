@@ -35,9 +35,9 @@ $(document).ready(function(){
 
     // typing text animation script
     var typed = new Typed(".typing", {
-        strings: ["Developer","Techie"],
-        typeSpeed: 100,
-        backSpeed: 60,
+        strings: ["Web Developer","Techie"],
+        typeSpeed: 110,
+        backSpeed: 70,
         loop: true
     });
 
@@ -74,7 +74,7 @@ $(document).ready(function(){
 
 // Some random colors
 const colors = ["white"];
-const numBalls = 25;
+const numBalls = 28;
 const balls = [];
 
 for (let i = 0; i < numBalls; i++) {

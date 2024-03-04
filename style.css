@@ -48,7 +48,7 @@ section{
 }
 .about .about-content,
 .works .work-content,
-.skills .skills-content,
+
 .contact .contact-content{
     display: flex;
     flex-wrap: wrap;
@@ -149,12 +149,12 @@ section{
 }
 .home .home-content .text-1{
     font-size: 75px;
-    font-weight: 600;
+    font-weight: 800;
     margin-left: 20px;
-    font-family: 'Lexend Giga', sans-serif;
+    font-family: 'Century Gothic', sans-serif;
 }
 .home .home-content .text-2{
-    font-size: 60px;
+    font-size: 45px;
     margin: 5px 20px;
     font-family: 'Lexend Peta', sans-serif;
 
@@ -432,6 +432,7 @@ section{
     color:white;
     text-align:center;
     font-family: 'Lexend Giga', sans-serif;
+    margin-bottom: 20px;
 }
 .about .about-content .left{
     width: 45%;
@@ -441,6 +442,7 @@ section{
     width: 400px;
     object-fit: cover;
     border-radius: 200px;
+    margin:6px;
 }
 .about .about-content .right{
     width: 55%;
@@ -502,19 +504,19 @@ section{
     background:#222;
     color:#fff;
     border-radius: 5rem;
-    padding:.5rem 2.5rem;
+    padding:.4rem 2rem;
     font-family: 'Poppins', sans-serif;
 }
 
 .education .box-container .box h3{
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color:#fff;
     padding-top: 1.5rem;
     font-family: 'Poppins', sans-serif;
 }
 
 .education .box-container .box p{
-    font-size: 1.4rem;
+    font-size: 1rem;
     color:#eee;
     padding: 1rem 0;
     font-family: 'Poppins', sans-serif;
@@ -585,56 +587,50 @@ section{
 
 /* skills section styling */
 .skills .title{ 
-         color:aliceblue;
-         text-align: center;
-         font-family: 'Lexend Giga', sans-serif;
-	 margin-bottom:20px;	
+    color:aliceblue;
+    text-align: center;
+    font-family: 'Lexend Giga', sans-serif;
+margin-bottom:20px;	
 }
 #bars {
-     display: flex;
-     gap:12px;
-     
+display: flex; 
+flex-wrap: wrap;
 } 
 
 .bar {
-    padding:12px;
-    height: 300px;
-    background-color: blue;
+width: 30%;
+text-align: center;
+display:inline-table;
+margin:0px;
 }
 
-/* .bar h3 {
-	font-size: 50px;
-	font-weight: normal;
-	margin: 0;
-    padding: 0;
-    color: #fff;
-	text-transform: uppercase;
-} */
-.bar >img{
-    height: 100%;
-    width:55px;
+.bar h3 {
+font-size: 50px;
+font-weight: normal;
+margin: 0;
+color: #fff;
+text-transform: uppercase;
 }
+
 .bar-circle {
-	display: list-item;
-    font-size: 500px;
-    margin: 80px;
+display: list-item;
+font-size: 500px;
+margin: 20%;
 }
 
 .active .bar{
-    animation: fade-right 1s ease-in;
+animation: fade-right 1s ease-in;
 }
-  @keyframes fade-right {
-    0% {
-      transform: translateX(100px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-
-
+@keyframes fade-right {
+0% {
+ transform: translateX(70px);
+ opacity: 0;
+}
+100% {
+ transform: translateX(0);
+ opacity: 1;
+}
+}
 
 /* contact section styling */
 .contact .title {
@@ -754,8 +750,11 @@ footer span a:hover{
 /* responsive media query start */
 @media (max-width: 1104px) {
     .about .about-content .left img{
-        height: 350px;
-        width: 350px;
+        height: 280px;
+        width: 280px;
+    }
+    .skills-content{
+        display: block;
     }
 }
 
@@ -827,7 +826,7 @@ footer span a:hover{
     }
     .skills .skills-content .column,
     .contact .contact-content .column{
-        width: 100%;
+        width: 90%;
         margin-bottom: 35px;
     }
     .bar {
@@ -891,6 +890,55 @@ footer span a:hover{
 }
 @media(max-width:400px){
     .education .box-container .box{
-        width:100%;
+        width:95%;
+    }
+}
+
+.container{
+    color:white;
+    font-family: 'Poppins', sans-serif;
+}
+.skills .progress {
+    height: 60px;
+    display: block;
+    background: none;
+    border-radius: 0;
+  }
+  
+  .skills .progress .skill {
+    padding: 10px 0;
+    margin: 0;
+    text-transform: uppercase;
+    display: block;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+  }
+  
+  .skills .progress .skill .val {
+    float: right;
+    font-style: normal;
+  }
+  
+  .skills .progress-bar-wrap {
+    background: #757575;
+  }
+  
+  .skills .progress-bar {
+    width: 1px;
+    height: 10px;
+    transition: 0.9s;
+    background-color: #D8E1FF;
+  }
+@media(min-width:768px){
+    .skills-content{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .col-lg-6{
+        flex-basis: 50%;
+        padding: 12px 24px;
     }
 }
